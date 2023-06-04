@@ -1,0 +1,246 @@
+[class*="__container"] {
+    max-width: 1400px;
+    margin: 0px auto;
+}
+
+.header__container {
+    background-color: rgb(15, 15, 84);
+    padding: 50px;
+}
+
+.header__title.title {
+    text-align: center;
+    letter-spacing: 10px;
+    text-shadow: 5px 0px 5px azure;
+    font-size: 30px;
+}
+
+.title {
+    font-family: Zero, decorative;
+    font-size: 25px;
+    color: #fff;
+    padding: 20px;
+}
+
+.section {
+    padding: 20px 0px;
+}
+
+.section__block {
+    max-width: 1200px;
+    border: 5px solid rgb(15, 15, 84);
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+.section__block>div {
+    box-shadow: 0px 5px 5px gray;
+}
+
+.about-us {
+    display: flex;
+    background: url('../img/sky.jpg') center / cover no-repeat;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-us__article {
+    max-width: 600px;
+    visibility: hidden;
+    opacity: 0;
+    animation: appear-text 2s linear 3s forwards;
+}
+
+@keyframes appear-text {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.about-us__animation {
+    max-width: 600px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.animation__image {
+    max-width: 200px;
+    position: relative;
+    top: 100%;
+    animation: appear-rocket 3s linear 0s forwards;
+}
+
+@keyframes appear-rocket {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+
+.article {
+    padding: 20px;
+}
+
+
+.article__title {
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid #fff;
+}
+
+.text {
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-family: '1942report', monospace;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.section__block.column3 {
+    border-radius: 0px;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.image {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.column3__link {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+    font-size: 14px;
+    transition: opacity 3s linear;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    border: 5px solid transparent;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+
+}
+
+
+.column3__infoblock {
+    position: relative;
+    flex: 0 1 390px;
+    border: 5px solid rgb(15, 15, 84);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: gray;
+}
+
+.column3__infoblock:hover .column3__link {
+    opacity: 1;
+    visibility: visible;
+}
+
+.column3__link:active {
+    border: 5px solid azure;
+}
+
+
+
+.cardbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.card {
+    flex: 0 1 560px;
+    border: 5px solid rgb(15, 15, 84);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.card__title {
+    color: rgb(15, 15, 84);
+    text-align: center;
+}
+
+
+
+.card__list {
+    flex-grow: 1;
+}
+
+.card__list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.card__list li {
+    color: rgb(15, 15, 84);
+    font-family: Zero;
+    position: relative;
+    padding-left: 30px;
+    line-height: 1.2;
+}
+
+.card__list li::before {
+    content: "";
+    border-bottom: 20px solid rgb(15, 15, 84);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.5s linear 0s;
+}
+
+.card__list li:hover::before {
+    transform-origin: 50% 50%;
+    transform: scale(1.2) rotate(90deg);
+}
+
+.card__link {
+    color: #fff;
+    text-shadow: 2px 0px 2px azure;
+    font-family: "1942report", monospace;
+    background-color: rgb(15, 15, 84);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    transition: letter-spacing 1s linear 0s;
+
+}
+
+.card__link>div {
+    padding: 10px;
+}
+
+.card__link:hover {
+    letter-spacing: 10px;
+}
